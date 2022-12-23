@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День 2</title>
+    <style>
+        .p1 {
+            text-align: left;
+            width: 100%;
+            border-bottom: 3px solid #313131;
+            height: 5%;
+        }
+
+        body {
+            background-image: url("snimok.png");
+            background-size:cover;
+        }
+        div {
+            background-color:#6a3d9ac3;
+            border-bottom: 2px solid #6a3d9a;
+            border-top: 2px solid #6a3d9a;
+            border-left: 2px solid #6a3d9a;
+            border-right: 2px solid #6a3d9a;
+            width: 600px;
+            height: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            color:aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p {
+            font-size: 17px;
+            text-align: left;
+            color:aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+         FORM {
+            font-size: 20px;
+            color:aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+    </style>
+</head>
+<body>
+    <p class="p1"><a href="index.html"><img src="назад.png" width="40"></a></p>
+    <div><h2>Заполни анкету, для доступа к моему сердечку</h2>
+        <p> Чингис, давай соберись, тебе нужно ответить на вопросы, чтобы получить пароль))) <br>
+            Сначала заполни все поля, нажми кнопку "Готово"</p>
+    <FORM NAME="Sel1">
+        <TABLE>
+            <TR><TD><B>Сколько мне лет?<B></TD>
+                <TD><INPUT NAME="Family" SIZE=20 type="number"></TD></TR>
+            <TR><TD><B>Какого числа у меня др?<B></TD>
+                <TD><INPUT NAME="Name" SIZE=20 type="number"></TD></TR>
+            <TR><TD><B>Какой у меня рост (см)?<B></TD>
+                <TD><INPUT NAME="Age" SIZE=20 type="number"></TD></TR>
+            <TR><TD><B>Последние 2 цифры <br> номера телефона<B></TD>
+                <TD><INPUT NAME="Phone" SIZE=20 type="number"></TD></TR>
+        </TABLE>
+        <INPUT TYPE="button" VALUE="Готово" onClick="Complete();">
+        <INPUT TYPE="reset" VALUE="Сброс">
+        <INPUT TYPE="button" VALUE="Проверить" onClick="func();">
+    </FORM></div>
+    <script>
+        function Complete() {
+            let Elem="Так, ты написал, что мой возраст " + document.Sel1.Family.value + " год," +
+                "\nчто мой день рождения " + document.Sel1.Name.value + " числа," +
+                "\nмой рост " + document.Sel1.Age.value + " см," +
+                "\nтелефон: " + document.Sel1.Phone.value + "." + 
+                "\nТеперь тебе нужно сложить все ЦИФРЫ, полученное число и будет паролем, теперь можешь проверить)))"
+            alert(Elem);
+        }
+        function func() {
+            alert("Пароль к моему сердечку: 32");
+        }
+    </script>
+</body>
+</html>
